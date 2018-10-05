@@ -2,6 +2,30 @@
 
 python compiler to convert tensorlayer code from 1.0 to 2.0
 
+## What it does
+
+TensorLayer2.0 introduce the factory model to replace the tl1.0 model.
+so the code
+
+```
+tl.layers.Conv2D(inpput, 20,20)
+```
+
+will become
+
+```
+tl.layers.Conv2D(20,20)(input)
+```
+
+thus we build a transcompiler to compile the code from tl.1.0 to tl 2.0
+
+## How it Works
+
+The system first parse the python code and build the abastract syntax tree(AST).
+then the system will tranverse the tree node, every time it finds the code writen in tensorlayer1.0, it replace the code with tensorlayer 2.0.
+
+after rebuild the tree, the system generate the python code based on the AST.
+
 ## to use it
 
 cd tensor_babel/tensor_babel
