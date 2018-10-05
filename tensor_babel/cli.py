@@ -20,6 +20,9 @@ def transcompile(input_file, output_file):
     tree_new = ast.fix_missing_locations(tree_new)
     code_new = astunparse.unparse(tree_new)
 
+    if(not output_file):
+        print code_new
+
     with open(output_file, 'w') as f:
         f.write(code_new)
 
