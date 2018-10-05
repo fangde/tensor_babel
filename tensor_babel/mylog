@@ -1,0 +1,17 @@
+ATTR InputLayer (25, 14)
+refactoring
+ATTR DropoutLayer (26, 14)
+refactoring
+keywords args is_train
+ATTR DenseLayer (27, 14)
+refactoring
+ATTR DropoutLayer (28, 14)
+refactoring
+keywords args is_train
+ATTR DenseLayer (29, 14)
+refactoring
+ATTR DropoutLayer (30, 14)
+refactoring
+keywords args is_train
+ATTR DenseLayer (31, 14)
+refactoring
