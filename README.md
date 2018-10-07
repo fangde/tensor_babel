@@ -168,6 +168,7 @@ db.save_model(net_train, model_name='mlp', name=((str(n_units1) + '-') + str(n_u
 1. only support python2.7
 2. depends on ast, and astunparse
 3. the comments are not preserved
+4. only the layers are called on top level are refactored
 
 ## how the extend
 
