@@ -1,9 +1,6 @@
+#!/usr/bin/env python
 import click
-
-import ast
-import astunparse
-
-from refactor import LayerCallRefactor
+from tensor_babel import refact_code 
 
 
 @click.command()
@@ -14,12 +11,7 @@ def transcompile(input_file, output_file):
     with open(input_file, 'r') as f:
         code = f.read()
 
-    tree = ast.parse(code)
-
-    tree_new = LayerCallRefactor().visit(tree)
-    tree_new = ast.fix_missing_locations(tree_new)
-    code_new = astunparse.unparse(tree_new)
-
+    code_new=refact_code(code)
 
     if(not output_file):
         print "code generated"
@@ -32,3 +24,6 @@ def transcompile(input_file, output_file):
 
 if __name__ == '__main__':
     transcompile()
+
+
+

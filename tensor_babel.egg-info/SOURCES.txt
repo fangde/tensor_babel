@@ -1,0 +1,13 @@
+README.md
+bin/TensorBabel
+tensor_babel/__init__.py
+tensor_babel/configure.py
+tensor_babel/refactor.py
+tensor_babel/transcompile.py
+tensor_babel.egg-info/PKG-INFO
+tensor_babel.egg-info/SOURCES.txt
+tensor_babel.egg-info/dependency_links.txt
+tensor_babel.egg-info/not-zip-safe
+tensor_babel.egg-info/requires.txt
+tensor_babel.egg-info/top_level.txt
+test/test2.py
