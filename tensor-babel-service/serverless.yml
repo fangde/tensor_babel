@@ -21,6 +21,7 @@ provider:
   name: aws
   runtime: python2.7
   region: cn-north-1
+  stage: dev2
   endpointType: regional
 
 # you can overwrite defaults here
@@ -58,6 +59,8 @@ provider:
 functions:
   babel:
     handler: handler.babel
+    events:
+      - http: POST hello
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
@@ -93,12 +96,7 @@ functions:
 #      variable2: value2
 
 # you can add CloudFormation resource templates here
-resources:
-  Resources:
-    NewResource:
-      Type: AWS::S3::Bucket
-      Properties:
-        BucketName: babel-bucket
+
 #  Outputs:
 #     NewOutput:
 #       Description: "Description for the output"
